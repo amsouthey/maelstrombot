@@ -2,13 +2,14 @@ package com.alicesouthey.maelstrombot.di
 
 import dagger.BindsInstance
 import dagger.Component
+import net.dv8tion.jda.core.JDA
 import net.dv8tion.jda.core.JDABuilder
 import javax.inject.Singleton
 
 @Singleton
 @Component(modules = arrayOf(DiscordModule::class, RandomModule::class))
 interface MaelstromAppComponent {
-	fun jdaBuilder(): JDABuilder
+	fun discord(): JDA
 
 	@Component.Builder
 	interface Builder {

@@ -10,7 +10,7 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter
  * @param trigger Trigger phrase for this listener.
  * @param response Response to be sent back to the channel in which the trigger phrase appears.
  */
-class CallResponseListener(val trigger: String, val response: String) : ListenerAdapter() {
+class CallResponseListener(private val trigger: String, private val response: String) : ListenerAdapter() {
 	private val pattern = Regex(trigger, RegexOption.IGNORE_CASE)
 	override fun onGuildMessageReceived(event: GuildMessageReceivedEvent) {
 		if (!event.author.isBot && pattern.matches(event.message.contentDisplay)) {
@@ -31,4 +31,3 @@ class CallResponseListener(val trigger: String, val response: String) : Listener
 		)
 	}
 }
-
