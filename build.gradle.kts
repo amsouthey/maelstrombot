@@ -36,3 +36,9 @@ tasks.withType<KotlinCompile> {
 application {
 	mainClassName = "com.alicesouthey.maelstrombot.app.MaelstromAppKt"
 }
+
+tasks {
+	val stage by registering {
+		dependsOn("clean", "build")
+	}
+}
