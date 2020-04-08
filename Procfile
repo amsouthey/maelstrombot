@@ -1,1 +1,1 @@
-worker: ./gradlew run
+worker: ./build/install/maelstrombot/bin/maelstrombot
