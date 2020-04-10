@@ -41,7 +41,7 @@ class PbtaListener(private val diceRoller: DiceRoller) : ListenerAdapter() {
 
 
 		event.channel.sendMessage(
-			"${event.author.getAsMention()} rolled ${roll.total} ($details). $hitMessage"
+			"${event.author.getAsMention()} rolled ${roll.total} ($details).\n **$hitMessage**"
 		).queue()
 
 
