@@ -27,7 +27,7 @@ class CallResponseListener(private val trigger: String, private val response: St
 		fun info() = CallResponseListener(
 			"!info",
 			"MaelstromBot Copyright 2018 Alice Southey. \n" +
-            "Report issues at https://github.com/amsouthey/maelstrombot\n" +
+            "Report issues at <https://github.com/amsouthey/maelstrombot>\n" +
 					"You can display a command list with !help."
 		)
 	}
