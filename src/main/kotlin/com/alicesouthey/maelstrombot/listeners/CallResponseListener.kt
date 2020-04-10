@@ -21,12 +21,13 @@ class CallResponseListener(private val trigger: String, private val response: St
 	companion object {
 		fun help() = CallResponseListener(
 			"!help",
-			"!pbta MOD [a|d]\tMake a PBTA roll with optional **MOD**ifier and **a**dvantage/**d**isadvantage."
+			"!roll MOD [a|d]\tMake a PBTA roll with optional **MOD**ifier and **a**dvantage/**d**isadvantage."
 		)
 
 		fun info() = CallResponseListener(
 			"!info",
-			"MaelstromBot Copyright 2018 Alice Southey. This bot is built on the JDA library. \n" +
+			"MaelstromBot Copyright 2018 Alice Southey. \n" +
+            "Report issues at https://github.com/amsouthey/maelstrombot\n" +
 					"You can display a command list with !help."
 		)
 	}
