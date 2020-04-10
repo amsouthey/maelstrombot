@@ -7,7 +7,7 @@ import java.util.regex.Pattern
 
 class PbtaListener(private val diceRoller: DiceRoller) : ListenerAdapter() {
 	private val pattern =
-		Pattern.compile("^!pbta(?:\\h+(?<mod>[+|-]?\\d+)?(?<adv>[a|d])?)?.*", Pattern.CASE_INSENSITIVE)
+		Pattern.compile("^!roll(?:\\h+(?<mod>[+|-]?\\d+)?(?<adv>[a|d])?)?.*", Pattern.CASE_INSENSITIVE)
 
 	override fun onGuildMessageReceived(event: GuildMessageReceivedEvent) {
 		if (event.author.isBot) {
@@ -41,7 +41,7 @@ class PbtaListener(private val diceRoller: DiceRoller) : ListenerAdapter() {
 
 
 		event.channel.sendMessage(
-			"You rolled ${roll.total} ($details). $hitMessage"
+			"${event.author.getAsMention()} rolled ${roll.total} ($details). $hitMessage"
 		).queue()
 
 
